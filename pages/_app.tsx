@@ -5,11 +5,13 @@ import { Toaster } from "react-hot-toast";
 import NavBar from "../layout/NavBar";
 
 export default function App({ Component, pageProps }: AppProps) {
+
   return (
     <ThemeProvider attribute="class">
       <Toaster />
-      <NavBar/>
+      <NavBar />
       <Component {...pageProps} />
     </ThemeProvider>
   );
+
 }

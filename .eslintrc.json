@@ -4,11 +4,7 @@
     "commonjs": true,
     "es2021": true
   },
-  "extends": [
-    "eslint:recommended",
-    "plugin:@typescript-eslint/recommended",
-    "next/core-web-vitals"
-  ],
+  "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended", "next/core-web-vitals"],
   "globals": {
     "Atomics": "readonly",
     "SharedArrayBuffer": "readonly"
@@ -18,41 +14,24 @@
   "parserOptions": {
     "ecmaVersion": "latest"
   },
-  "plugins": [
-    "@typescript-eslint",
-    "import"
-  ],
+  "plugins": ["@typescript-eslint", "import"],
   "rules": {
     "import/order": [
       1,
       {
-        "groups": [
-          "external",
-          "builtin",
-          "internal",
-          "sibling",
-          "parent",
-          "index"
-        ]
+        "groups": ["external", "builtin", "internal", "sibling", "parent", "index"]
       }
     ],
-    "comma-dangle": [
-      1,
-      "always-multiline"
-    ],
+    "comma-dangle": [1, "always-multiline"],
     "func-names": 0,
     "no-param-reassign": 0,
     "space-before-function-paren": 0,
     "space-before-blocks": 0,
     "camelcase": "error",
     "semi": 1,
-    "max-len": [
-      1
-    ],
+    "max-len": [1],
     "no-else-return": 1,
-    "no-underscore-dangle": [
-      "off"
-    ],
+    "no-underscore-dangle": ["off"],
     "guard-for-in": 1,
     "no-restricted-syntax": 1,
     "no-shadow": 1,
@@ -115,9 +94,6 @@
         "exceptAfterSingleLine": true
       }
     ],
-    "multiline-ternary": [
-      "error",
-      "always-multiline"
-    ]
+    "multiline-ternary": ["error", "always-multiline"]
   }
 }

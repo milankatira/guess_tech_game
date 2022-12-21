@@ -1,6 +1,5 @@
-  
-        export const initialValue = {
-          tech: {
-            name: "",
-          },
-        };
+export const initialValue = {
+  tech: {
+    name: "",
+  },
+};

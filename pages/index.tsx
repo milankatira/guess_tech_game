@@ -3,19 +3,19 @@ import dynamic from "next/dynamic";
 const Card = dynamic(() => import("../components/Card"), {
   ssr: false,
 });
+import { useState } from "react";
 import { Technology } from "../constant/technology";
 import { SuffleArray } from "../utils/SuffleArray";
-import { useState } from "react";
 
 export default function Home() {
 
-  const [randomTech, setrandomTech] = useState(
-    SuffleArray(Technology)
-  );
+  const [randomTech, setrandomTech] = useState(SuffleArray(Technology));
 
   const handleSuffle: () => void = () => {
+
     const randomData = SuffleArray(Technology);
     setrandomTech([...randomData]);
+
   };
 
   return (
@@ -28,4 +28,5 @@ export default function Home() {
       <Card randomTech={randomTech} handleSuffle={handleSuffle} />
     </div>
   );
+
 }

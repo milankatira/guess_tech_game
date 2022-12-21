@@ -1,19 +1,11 @@
 import React from "react";
 import { Field } from "formik";
 import { SelectFieldProps } from "component";
-const BasicSelectField: React.FC<SelectFieldProps> = ({
-  error,
-  options,
-  inputLabel,
-  name,
-  disabled=false
-}) => {
+const BasicSelectField: React.FC<SelectFieldProps> = ({ error, options, inputLabel, name, disabled = false }) => {
+
   return (
     <div className="relative mb-4">
-      <label
-        htmlFor="country"
-        className="block uppercase text-gray-600 text-xs font-bold mb-2"
-      >
+      <label htmlFor="country" className="block uppercase text-gray-600 text-xs font-bold mb-2">
         {inputLabel}
       </label>
 
@@ -37,6 +29,7 @@ const BasicSelectField: React.FC<SelectFieldProps> = ({
       <span className="text-red-700 font-sans font-semibold">{error}</span>
     </div>
   );
+
 };
 
 export default BasicSelectField;

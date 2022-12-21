@@ -10,11 +10,11 @@ declare module "component" {
     onChange?: MyFunctionType;
     disabled?: boolean;
   }
-  
+
   export interface ButtonFieldProps {
-     disabled?: boolean;
-     text?: string | any;
-     onClick?: MyFunctionType;
-     type?: "submit" | "reset" | "button" | undefined;
-   }
+    disabled?: boolean;
+    text?: string | any;
+    onClick?: MyFunctionType;
+    type?: "submit" | "reset" | "button" | undefined;
+  }
 }
