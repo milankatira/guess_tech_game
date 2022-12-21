@@ -1,6 +1,7 @@
 import React from "react";
 import { toast } from "react-hot-toast";
 import useSound from "use-sound";
+import { Message } from "../constant/message";
 
 interface ITechnologyCard {
   item: {
@@ -18,7 +19,7 @@ const TechnologyCard = ({ item, handleClick, show, disabled }: ITechnologyCard) 
 
   const handleSubmit = (name: string) => {
 
-    if (disabled) toast.error("please select the word");
+    if (disabled) toast.error(Message.SelectTheWord);
     else {
 
       ThemeSound();

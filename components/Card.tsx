@@ -7,6 +7,7 @@ import ButtonField from "./common/ButtonField";
 import { Technology } from "../constant/technology";
 import { initialValue } from "../constant/initialValue";
 import { TechValidator } from "../validator/techValidator";
+import { Message } from "../constant/message";
 interface Icard {
   randomTech: { name: string; icon: string }[];
   handleSuffle: () => void;
@@ -68,11 +69,13 @@ const Card = ({ randomTech, handleSuffle }: Icard) => {
       {point >= 0
         ? (
             <h1 className="flex justify-center my-4 font-mono font-light text-blue-600 dark:text-[#6affDA]">
-          Your Score {point}
+              {Message.YourScore(point)}
             </h1>
           )
         : (
-            <h1 className="flex justify-center my-4 font-mono font-light text-red-800 dark:text-[#6affDA]">Game Over</h1>
+            <h1 className="flex justify-center my-4 font-mono font-light text-red-800 dark:text-[#6affDA]">
+              {Message.GameOver}
+            </h1>
           )}
       <div className="flex flex-row flex-wrap">
         {randomTech?.map((item) => (
@@ -110,11 +113,11 @@ const Card = ({ randomTech, handleSuffle }: Icard) => {
               name
                 ? (
                     <h2 className="my-4 font-mono font-light text-blue-600 dark:text-[#6affDA]">
-              please gause the block with {name}
+                      {Message.GuessTheBlock(name)}
                     </h2>
                   )
                 : (
-                    <h2 className="my-4 font-mono font-light text-red-600 dark:text-[#6affDA]">please select the word</h2>
+                    <h2 className="my-4 font-mono font-light text-red-600 dark:text-[#6affDA]">{Message.SelectTheWord}</h2>
                   )
             )
           : (
