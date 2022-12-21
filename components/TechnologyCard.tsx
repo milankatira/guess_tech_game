@@ -45,9 +45,7 @@ const TechnologyCard = ({ item, handleClick, show, disabled }: ITechnologyCard) 
                 data-bs-toggle="tooltip"
                 title="Hi! I'm tooltip"
                 className="h-16 w-16 m-4 backdrop-blur-sm bg-blue-300/30 rounded-2xl"
-              >
-                {item.name}
-              </div>
+              ></div>
             </>
           )}
     </button>
