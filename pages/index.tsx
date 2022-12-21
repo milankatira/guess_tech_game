@@ -1,5 +1,8 @@
 import Head from "next/head";
-import Card from "../components/Card";
+import dynamic from "next/dynamic";
+const Card = dynamic(() => import("../components/Card"), {
+  ssr: false,
+});
 import { Technology } from "../constant/technology";
 import { SuffleArray } from "../utils/SuffleArray";
 import { useState } from "react";
