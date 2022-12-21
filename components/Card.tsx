@@ -57,7 +57,7 @@ const Card = ({ randomTech, handleSuffle }: Icard) => {
           Your Score {point}
         </h1>
       ) : (
-        <h1 className="flex justify-center my-4 font-mono font-light text-red-800">
+        <h1 className="flex justify-center my-4 font-mono font-light text-red-800 dark:text-[#6affDA]">
           Game Over
         </h1>
       )}
@@ -100,9 +100,15 @@ const Card = ({ randomTech, handleSuffle }: Icard) => {
         </Formik>
         <h1 className="my-4 font-extrabold">{name}</h1>
         {!show ? (
-          <h2 className="my-4 font-mono font-light text-blue-600 dark:text-[#6affDA]">
-            please gause the block with {name}
-          </h2>
+          name ? (
+            <h2 className="my-4 font-mono font-light text-blue-600 dark:text-[#6affDA]">
+              please gause the block with {name}
+            </h2>
+          ) : (
+            <h2 className="my-4 font-mono font-light text-red-600 dark:text-[#6affDA]">
+              please select the word
+            </h2>
+          )
         ) : (
           <div className="flex justify-between">
             <h2>{selectedValue}</h2>

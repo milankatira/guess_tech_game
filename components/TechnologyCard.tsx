@@ -1,4 +1,5 @@
 import React from "react";
+import { toast } from "react-hot-toast";
 import useSound from "use-sound";
 
 interface ITechnologyCard {
@@ -20,7 +21,7 @@ const TechnologyCard = ({
   const [ThemeSound] = useSound("/sound/pop-up-on.mp3");
 
   const handleSubmit = (name: string) => {
-    if (disabled) alert("Please");
+    if (disabled) toast.error("please select the word");
     else {
       ThemeSound();
       handleClick(name);
